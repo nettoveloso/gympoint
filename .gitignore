@@ -10,7 +10,8 @@ log.txt
 *.sublime-project
 *.sublime-workspace
 npm-debug.log*
-.yarn-lock
+.yarn*
+*yarn
 
 .idea/
 .sourcemaps/
