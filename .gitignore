@@ -12,6 +12,7 @@ log.txt
 npm-debug.log*
 .yarn*
 *yarn
+.env
 
 .idea/
 .sourcemaps/
