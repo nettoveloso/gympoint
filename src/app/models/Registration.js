@@ -5,7 +5,7 @@ class Registration extends Model {
     super.init(
       {
         start_date: Sequelize.DATE,
-        end_date: Sequelize.INTEGER,
+        end_date: Sequelize.DATE,
         price: Sequelize.DECIMAL(5, 2),
       },
       {
@@ -17,11 +17,8 @@ class Registration extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.Student, {
-      foreignKey: 'student_id ',
-      as: 'student',
-    });
-    this.belongsTo(models.Plan, { foreignKey: 'plan_id ', as: 'plan' });
+    this.belongsTo(models.Student, { foreignKey: 'student_id' });
+    this.belongsTo(models.Plan, { foreignKey: 'plan_id' });
   }
 }
 

@@ -12,14 +12,14 @@ module.exports = {
         references: { model: 'Students', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
-        allowNull: true,
+        allowNull: false,
       },
       plan_id: {
         type: Sequelize.INTEGER,
         references: { model: 'Plans', key: 'id' },
         onUpdate: 'SET NULL',
         onDelete: 'SET NULL',
-        allowNull: true,
+        allowNull: false,
       },
       start_date: {
         type: Sequelize.DATE,

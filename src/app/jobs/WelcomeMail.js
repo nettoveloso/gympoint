@@ -8,16 +8,16 @@ class WelcomeMail {
   }
 
   async handle({ data }) {
-    const { registration } = data;
+    const { registration, student, plan } = data;
 
     await Mail.sendMail({
-      to: `${registration.student.nome} <${registration.student.email}>`,
+      to: `${student.nome} <${student.email}>`,
       subject: 'Seja Bem Vindo ao GymPoint',
       template: 'welcome',
       context: {
-        student: registration.student.name,
-        plan: registration.plan.title,
-        duration: registration.plan.duration,
+        student: student.name,
+        plan: plan.title,
+        duration: plan.duration,
         end_date: format(
           parseISO(registration.end_date),
           "'dia' dd 'de' MMMM', às' H:mm'h'",

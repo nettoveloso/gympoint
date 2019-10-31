@@ -30,7 +30,7 @@ routes.delete('/plans/:id', PlanControlller.delete);
 
 // Matricula do Aluno
 routes.get('/students-registrations', RegistrationController.index);
-// routes.post('/plans', RegistrationController.store);
+routes.post('/students-registrations', RegistrationController.store);
 // routes.put('/plans/:id', RegistrationController.update);
 // routes.delete('/plans/:id', RegistrationController.delete);
 
