@@ -4,7 +4,7 @@ services:
   database:
     image: postgres:11
     container_name: database_pg
-    restart: always
+    #restart: always
     environment:
       - POSTGRES_PASSWORD=docker
     ports:
